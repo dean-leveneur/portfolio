@@ -7,30 +7,41 @@ export default {
   theme: {
     extend: {
       colors: {
-        tech: {
-          darkest: '#080C14',
-          dark: '#0F1523',
-          card: '#161F33',
-          cardHover: '#1C2842',
-          border: '#232F47',
-          borderActive: '#00E5FF',
-          cyan: '#00E5FF',
-          emerald: '#00E676',
-          amber: '#FF8C42',
-          purple: '#B388FF',
-          muted: '#94A3B8',
-          subtle: '#475569',
+        paper: {
+          bg: '#F5F3EF',
+          grid: '#E4E0D7',
+          card: '#FFFFFF',
+          cardHover: '#FAF8F5',
+          border: '#E2DDD3',
+          borderActive: '#1E3A8A'
+        },
+        ink: {
+          dark: '#17191C',
+          muted: '#5C6470',
+          subtle: '#8C95A3',
           light: '#F8FAFC'
+        },
+        blueprint: {
+          DEFAULT: '#1E3A8A',
+          hover: '#1D4ED8',
+          light: '#EFF6FF'
+        },
+        copper: {
+          DEFAULT: '#B95000',
+          hover: '#D97706',
+          light: '#FFFBEB'
+        },
+        emeraldSeal: {
+          DEFAULT: '#059669',
+          light: '#ECFDF5'
         }
       },
       fontFamily: {
-        display: ['"Space Grotesk"', 'sans-serif'],
+        display: ['"Syne"', '"Space Grotesk"', 'sans-serif'],
+        serif: ['"Source Serif 4"', 'serif'],
         mono: ['"JetBrains Mono"', 'monospace'],
-        body: ['"Plus Jakarta Sans"', 'sans-serif']
-      },
-      backgroundImage: {
-        'grid-pattern': "radial-gradient(rgba(0, 229, 255, 0.08) 1px, transparent 0)",
-        'dots-pattern': "radial-gradient(rgba(148, 163, 184, 0.15) 1px, transparent 0)"
+        body: ['"Source Serif 4"', 'serif'],
+        sans: ['"Space Grotesk"', 'sans-serif']
       }
     },
   },

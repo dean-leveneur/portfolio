@@ -4,48 +4,49 @@
 
 @layer base {
   body {
-    background-color: #080C14;
-    color: #F8FAFC;
-    font-family: 'Plus Jakarta Sans', sans-serif;
+    background-color: #F5F3EF;
+    color: #17191C;
+    font-family: 'Source Serif 4', serif;
     overflow-x: hidden;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Syne', 'Space Grotesk', sans-serif;
   }
 }
 
-/* Custom CAD Technical Grid overlay */
-.tech-grid-bg {
-  background-size: 32px 32px;
-  background-image: 
-    linear-gradient(to right, rgba(35, 47, 71, 0.25) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(35, 47, 71, 0.25) 1px, transparent 1px);
-}
-
-.tech-dots-bg {
+/* Technical Millimeter Graph Paper Grid */
+.paper-grid-bg {
   background-size: 24px 24px;
-  background-image: radial-gradient(rgba(0, 229, 255, 0.12) 1px, transparent 0);
+  background-image: 
+    linear-gradient(to right, rgba(228, 224, 215, 0.7) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(228, 224, 215, 0.7) 1px, transparent 1px);
 }
 
-/* Custom telemetry glow animations */
-@keyframes pulse-subtle {
-  0%, 100% { opacity: 1; transform: scale(1); }
-  50% { opacity: 0.6; transform: scale(0.98); }
+.paper-grid-dense {
+  background-size: 12px 12px;
+  background-image: 
+    linear-gradient(to right, rgba(228, 224, 215, 0.5) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(228, 224, 215, 0.5) 1px, transparent 1px);
 }
 
-.animate-pulse-subtle {
-  animation: pulse-subtle 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+/* Technical blueprint stamp badge */
+.stamp-badge {
+  border: 1.5px dashed #1E3A8A;
+  background-color: rgba(30, 58, 138, 0.04);
 }
 
-/* Technical custom scrollbar */
+/* Custom editorial scrollbar */
 ::-webkit-scrollbar {
   width: 8px;
 }
 ::-webkit-scrollbar-track {
-  background: #080C14;
+  background: #F5F3EF;
 }
 ::-webkit-scrollbar-thumb {
-  background: #1C2842;
+  background: #D6D1C7;
   border-radius: 4px;
-  border: 1px solid #232F47;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #00E5FF;
+  background: #1E3A8A;
 }

@@ -1,19 +1,11 @@
-import React, { useState, useEffect } from 'react';
-import { Terminal, Download, Menu, X, Check, MapPin } from 'lucide-react';
+import React, { useState } from 'react';
+import { NavLink, Link } from 'react-router-dom';
+import { Terminal, Menu, X, FileText, Check, Award } from 'lucide-react';
 import { profileData } from '../data/profile';
 
 export default function Navbar() {
-  const [scrolled, setScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [copied, setCopied] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setScrolled(window.scrollY > 20);
-    };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
 
   const handleCopyEmail = () => {
     navigator.clipboard.writeText(profileData.email);
@@ -21,84 +13,84 @@ export default function Navbar() {
     setTimeout(() => setCopied(false), 2000);
   };
 
+  const navLinkClass = ({ isActive }) => 
+    `font-sans text-xs uppercase tracking-wider font-semibold transition-all border-b-2 py-1 ${
+      isActive 
+        ? 'border-blueprint text-blueprint font-bold' 
+        : 'border-transparent text-ink-muted hover:text-ink-dark'
+    }`;
+
   return (
-    <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-      scrolled 
-        ? 'bg-tech-darkest/90 backdrop-blur-md border-b border-tech-border py-3 shadow-xl' 
-        : 'bg-transparent py-5'
-    }`}>
+    <header className="sticky top-0 z-50 bg-paper-bg/95 backdrop-blur-sm border-b border-paper-border py-4">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
         
-        {/* Brand Logo & Telemetry */}
-        <a href="#" className="flex items-center gap-3 group">
-          <div className="w-10 h-10 rounded-lg bg-tech-card border border-tech-border group-hover:border-tech-cyan flex items-center justify-center transition-colors">
-            <Terminal className="w-5 h-5 text-tech-cyan" />
+        {/* Brand Logo & Editorial Stamp */}
+        <Link to="/" className="flex items-center gap-3 group">
+          <div className="w-10 h-10 rounded bg-paper-card border border-paper-border flex items-center justify-center font-mono font-bold text-blueprint text-sm shadow-sm group-hover:border-blueprint transition-colors">
+            DL
           </div>
           <div>
-            <div className="font-display font-bold text-lg text-tech-light group-hover:text-tech-cyan transition-colors flex items-center gap-2">
+            <div className="font-display font-bold text-lg text-ink-dark group-hover:text-blueprint transition-colors flex items-center gap-2">
               Dean LEVENEUR
-              <span className="font-mono text-[10px] px-1.5 py-0.5 rounded bg-tech-cyan/10 text-tech-cyan border border-tech-cyan/20">
+              <span className="font-mono text-[10px] px-1.5 py-0.5 rounded stamp-badge text-blueprint font-bold uppercase">
                 INSA 3IF
               </span>
             </div>
-            <div className="font-mono text-xs text-tech-muted flex items-center gap-1">
-              <span className="w-2 h-2 rounded-full bg-tech-emerald animate-pulse"></span>
-              STAGE 2027 • LYON / LA RÉUNION
+            <div className="font-mono text-[11px] text-ink-muted flex items-center gap-1.5">
+              <span className="w-2 h-2 rounded-full bg-emeraldSeal"></span>
+              CARNET D'INGÉNIERIE • STAGE 2027
             </div>
           </div>
-        </a>
+        </Link>
 
         {/* Desktop Nav Links */}
-        <nav className="hidden md:flex items-center gap-6 font-mono text-xs">
-          <a href="#projets" className="text-tech-muted hover:text-tech-cyan transition-colors">
-            <span className="text-tech-cyan mr-1">01.</span>Projets
-          </a>
-          <a href="#demo-interactive" className="text-tech-muted hover:text-tech-cyan transition-colors">
-            <span className="text-tech-cyan mr-1">02.</span>Démos Live
-          </a>
-          <a href="#competences" className="text-tech-muted hover:text-tech-cyan transition-colors">
-            <span className="text-tech-cyan mr-1">03.</span>Compétences
-          </a>
-          <a href="#parcours" className="text-tech-muted hover:text-tech-cyan transition-colors">
-            <span className="text-tech-cyan mr-1">04.</span>Parcours
-          </a>
-          <a href="#contact" className="text-tech-muted hover:text-tech-cyan transition-colors">
-            <span className="text-tech-cyan mr-1">05.</span>Contact
-          </a>
+        <nav className="hidden md:flex items-center gap-8 font-mono text-xs">
+          <NavLink to="/" className={navLinkClass} end>
+            01. Accueil
+          </NavLink>
+          <NavLink to="/projets" className={navLinkClass}>
+            02. Projets Phares
+          </NavLink>
+          <NavLink to="/a-propos" className={navLinkClass}>
+            03. À Propos & Cursus
+          </NavLink>
+          <NavLink to="/contact" className={navLinkClass}>
+            04. Contact & Stage
+          </NavLink>
         </nav>
 
-        {/* CTA Buttons */}
-        <div className="hidden lg:flex items-center gap-3">
+        {/* Action Buttons */}
+        <div className="hidden lg:flex items-center gap-3 font-mono text-xs">
           <button 
             onClick={handleCopyEmail}
-            className="font-mono text-xs px-3 py-2 rounded border border-tech-border hover:border-tech-cyan/50 bg-tech-card hover:bg-tech-cardHover text-tech-muted hover:text-tech-light transition-all flex items-center gap-1.5"
+            className="px-3 py-1.5 rounded bg-paper-card border border-paper-border hover:border-blueprint text-ink-muted hover:text-ink-dark transition-all flex items-center gap-1.5"
             title="Copier l'e-mail"
           >
             {copied ? (
               <>
-                <Check className="w-3.5 h-3.5 text-tech-emerald" />
-                <span className="text-tech-emerald">Copié !</span>
+                <Check className="w-3.5 h-3.5 text-emeraldSeal" />
+                <span className="text-emeraldSeal font-bold">Email Copié !</span>
               </>
             ) : (
               <>
-                <span className="text-tech-cyan">email:</span> {profileData.email}
+                <span className="text-blueprint font-semibold">email:</span> {profileData.email}
               </>
             )}
           </button>
 
-          <a 
-            href="#contact" 
-            className="font-mono text-xs px-4 py-2 rounded bg-tech-cyan/10 hover:bg-tech-cyan/20 border border-tech-cyan/40 text-tech-cyan font-semibold transition-all shadow-[0_0_15px_rgba(0,229,255,0.15)] flex items-center gap-2"
+          <Link 
+            to="/contact" 
+            className="px-4 py-1.5 rounded bg-blueprint text-white font-sans font-bold text-xs hover:bg-blueprint-hover transition-all shadow-sm flex items-center gap-2"
           >
-            Discuter du Stage
-          </a>
+            Proposer un Stage
+          </Link>
         </div>
 
-        {/* Mobile Menu Toggle */}
+        {/* Mobile Toggle */}
         <button 
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-          className="md:hidden p-2 rounded border border-tech-border bg-tech-card text-tech-muted hover:text-tech-light"
-          aria-label="Toggle Menu"
+          className="md:hidden p-2 rounded border border-paper-border bg-paper-card text-ink-dark"
+          aria-label="Toggle Navigation"
         >
           {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
         </button>
@@ -106,42 +98,36 @@ export default function Navbar() {
 
       {/* Mobile Drawer */}
       {mobileMenuOpen && (
-        <div className="md:hidden bg-tech-dark border-b border-tech-border px-4 py-6 space-y-4 font-mono text-sm">
-          <a 
-            href="#projets" 
+        <div className="md:hidden bg-paper-card border-b border-paper-border px-4 py-6 space-y-4 font-mono text-sm">
+          <NavLink 
+            to="/" 
             onClick={() => setMobileMenuOpen(false)}
-            className="block text-tech-muted hover:text-tech-cyan py-2 border-b border-tech-border/40"
+            className="block text-ink-dark py-2 border-b border-paper-border/60"
+            end
           >
-            01. Projets Phares
-          </a>
-          <a 
-            href="#demo-interactive" 
+            01. Accueil
+          </NavLink>
+          <NavLink 
+            to="/projets" 
             onClick={() => setMobileMenuOpen(false)}
-            className="block text-tech-muted hover:text-tech-cyan py-2 border-b border-tech-border/40"
+            className="block text-ink-dark py-2 border-b border-paper-border/60"
           >
-            02. Démonstrateurs Live
-          </a>
-          <a 
-            href="#competences" 
+            02. Tous les Projets
+          </NavLink>
+          <NavLink 
+            to="/a-propos" 
             onClick={() => setMobileMenuOpen(false)}
-            className="block text-tech-muted hover:text-tech-cyan py-2 border-b border-tech-border/40"
+            className="block text-ink-dark py-2 border-b border-paper-border/60"
           >
-            03. Compétences Techniques
-          </a>
-          <a 
-            href="#parcours" 
+            03. À Propos & Cursus INSA 3IF
+          </NavLink>
+          <NavLink 
+            to="/contact" 
             onClick={() => setMobileMenuOpen(false)}
-            className="block text-tech-muted hover:text-tech-cyan py-2 border-b border-tech-border/40"
+            className="block text-blueprint font-bold py-2"
           >
-            04. Cursus & Expérience
-          </a>
-          <a 
-            href="#contact" 
-            onClick={() => setMobileMenuOpen(false)}
-            className="block text-tech-cyan font-semibold py-2"
-          >
-            05. Me contacter / Offre de Stage
-          </a>
+            04. Contact & Proposition de Stage
+          </NavLink>
         </div>
       )}
     </header>

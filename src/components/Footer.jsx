@@ -1,79 +1,85 @@
 import React from 'react';
-import { Terminal, ShieldCheck, Github, Linkedin, Mail } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import { Terminal, Github, Linkedin, Mail, ShieldCheck } from 'lucide-react';
 import { profileData } from '../data/profile';
 
 export default function Footer() {
   return (
-    <footer className="bg-tech-darkest border-t border-tech-border py-12 font-mono text-xs text-tech-muted">
+    <footer className="bg-paper-card border-t border-paper-border py-12 font-mono text-xs text-ink-muted">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
         
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-center justify-between">
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-start justify-between">
           
-          {/* Left Column */}
-          <div className="md:col-span-6 space-y-2">
-            <div className="flex items-center gap-2 text-tech-light font-bold font-display text-base">
-              <Terminal className="w-4 h-4 text-tech-cyan" />
+          {/* Brand Info */}
+          <div className="md:col-span-5 space-y-2">
+            <div className="flex items-center gap-2 text-ink-dark font-bold font-display text-base">
+              <Terminal className="w-4 h-4 text-blueprint" />
               Dean LEVENEUR
             </div>
-            <p className="text-tech-subtle text-xs">
+            <p className="text-ink-muted text-xs leading-relaxed">
               Élève-Ingénieur INSA Lyon — Département Informatique (3IF)<br />
-              Spécialisation Développement Software, Embarqué & Simulation Numérique.
+              Ingénierie Software, POSIX/C, Systèmes Embarqués & Simulation Numérique.
             </p>
           </div>
 
-          {/* Center Column: Telemetry Status */}
-          <div className="md:col-span-3 space-y-1">
-            <div className="text-[11px] text-tech-subtle">// TÉLÉMÉTRIE DÉPLOIEMENT</div>
-            <div className="flex items-center gap-2 text-tech-emerald text-xs">
-              <span className="w-2 h-2 rounded-full bg-tech-emerald animate-pulse"></span>
-              BUILD: V3.0.3IF_OK
-            </div>
-            <div className="text-tech-muted text-[11px]">
-              REACT + VITE + TAILWIND CSS
+          {/* Quick Navigation Links */}
+          <div className="md:col-span-4 space-y-2">
+            <div className="text-[11px] text-blueprint font-bold uppercase">// PLAN DU CARNET</div>
+            <div className="grid grid-cols-2 gap-2 text-xs">
+              <Link to="/" className="hover:text-blueprint transition-colors">01. Accueil</Link>
+              <Link to="/projets" className="hover:text-blueprint transition-colors">02. Projets Phares</Link>
+              <Link to="/a-propos" className="hover:text-blueprint transition-colors">03. À Propos</Link>
+              <Link to="/contact" className="hover:text-blueprint transition-colors">04. Contact & Stage</Link>
             </div>
           </div>
 
-          {/* Right Column: Quick Links */}
-          <div className="md:col-span-3 flex items-center justify-start md:justify-end gap-4">
-            <a 
-              href={profileData.github} 
-              target="_blank" 
-              rel="noopener noreferrer" 
-              className="p-2 rounded bg-tech-dark border border-tech-border hover:border-tech-cyan text-tech-muted hover:text-tech-light transition-colors"
-              title="GitHub"
-            >
-              <Github className="w-4 h-4" />
-            </a>
+          {/* External Links & Stamp */}
+          <div className="md:col-span-3 space-y-3 flex flex-col items-start md:items-end">
+            <div className="flex items-center gap-3">
+              <a 
+                href={profileData.github} 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="p-2 rounded bg-paper-bg border border-paper-border hover:border-blueprint text-ink-dark transition-colors"
+                title="GitHub"
+              >
+                <Github className="w-4 h-4" />
+              </a>
 
-            <a 
-              href={profileData.linkedin} 
-              target="_blank" 
-              rel="noopener noreferrer" 
-              className="p-2 rounded bg-tech-dark border border-tech-border hover:border-tech-cyan text-tech-muted hover:text-tech-light transition-colors"
-              title="LinkedIn"
-            >
-              <Linkedin className="w-4 h-4" />
-            </a>
+              <a 
+                href={profileData.linkedin} 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="p-2 rounded bg-paper-bg border border-paper-border hover:border-blueprint text-ink-dark transition-colors"
+                title="LinkedIn"
+              >
+                <Linkedin className="w-4 h-4" />
+              </a>
 
-            <a 
-              href={`mailto:${profileData.email}`} 
-              className="p-2 rounded bg-tech-dark border border-tech-border hover:border-tech-cyan text-tech-muted hover:text-tech-light transition-colors"
-              title="Email"
-            >
-              <Mail className="w-4 h-4" />
-            </a>
+              <a 
+                href={`mailto:${profileData.email}`} 
+                className="p-2 rounded bg-paper-bg border border-paper-border hover:border-blueprint text-ink-dark transition-colors"
+                title="Email"
+              >
+                <Mail className="w-4 h-4" />
+              </a>
+            </div>
+
+            <div className="px-3 py-1 rounded stamp-badge text-[11px] font-bold text-blueprint">
+              STAGE 2027 • LYON / LA RÉUNION
+            </div>
           </div>
 
         </div>
 
         {/* Bottom Bar */}
-        <div className="pt-6 border-t border-tech-border/40 flex flex-col sm:flex-row items-center justify-between gap-4 text-[11px] text-tech-subtle">
+        <div className="pt-6 border-t border-paper-border/80 flex flex-col sm:flex-row items-center justify-between gap-4 text-[11px] text-ink-subtle">
           <div>
-            © {new Date().getFullYear()} Dean Leveneur. Conçu avec rigueur d'ingénieur (aucun template générique).
+            © {new Date().getFullYear()} Dean Leveneur. Carnet d'Ingénierie éditorial. Tous droits réservés.
           </div>
 
           <div>
-            Zones de stage : <span className="text-tech-muted">Lyon / Villeurbanne (TCL)</span> | <span className="text-tech-muted">La Réunion</span>
+            INSA Lyon 3IF • Convention Jumplyn CTI
           </div>
         </div>
 
