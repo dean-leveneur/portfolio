@@ -54,7 +54,7 @@ export default function CaseStudyRunHelico() {
               className="px-3.5 py-1.5 rounded bg-minimal-dark text-white hover:bg-black transition-smooth flex items-center gap-1.5 font-sans font-medium text-xs"
             >
               <Github className="w-3.5 h-3.5" />
-              <span>Dépôt GitHub Réel (RunMail)</span>
+              <span>Dépôt GitHub</span>
             </a>
           )}
         </div>

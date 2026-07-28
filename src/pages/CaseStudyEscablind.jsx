@@ -9,7 +9,7 @@ export default function CaseStudyEscablind() {
 
   return (
     <div className="max-w-4xl mx-auto px-6 sm:px-8 py-12 space-y-12">
-      
+
       <Breadcrumbs items={[
         { label: 'Projets', path: '/projets' },
         { label: 'EscaBlind' }
@@ -18,9 +18,9 @@ export default function CaseStudyEscablind() {
       {/* Hero Cover Card with Image */}
       <div className="space-y-6 border-b border-minimal-border pb-8">
         <div className="w-full h-64 sm:h-96 rounded-xl bg-minimal-card border border-minimal-border overflow-hidden flex items-center justify-center p-4">
-          <img 
-            src={project.image} 
-            alt={project.title} 
+          <img
+            src={project.image}
+            alt={project.title}
             className="w-full h-full object-contain"
           />
         </div>
@@ -47,14 +47,14 @@ export default function CaseStudyEscablind() {
           </div>
 
           {project.githubUrl && (
-            <a 
-              href={project.githubUrl} 
-              target="_blank" 
+            <a
+              href={project.githubUrl}
+              target="_blank"
               rel="noopener noreferrer"
               className="px-3.5 py-1.5 rounded bg-minimal-dark text-white hover:bg-black transition-smooth flex items-center gap-1.5 font-sans font-medium text-xs"
             >
               <Github className="w-3.5 h-3.5" />
-              <span>Dépôt GitHub Réel</span>
+              <span>Dépôt GitHub</span>
             </a>
           )}
         </div>
@@ -62,7 +62,7 @@ export default function CaseStudyEscablind() {
 
       {/* Short Direct Sections */}
       <div className="space-y-10 text-minimal-dark text-sm sm:text-base leading-relaxed">
-        
+
         <section className="space-y-3">
           <h2 className="font-bold text-lg text-minimal-dark tracking-tight">
             Contexte
