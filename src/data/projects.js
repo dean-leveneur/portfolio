@@ -35,7 +35,7 @@ export const projectsData = [
     techStack: ["Python 3", "Tkinter", "Dijkstra & A*", "Link State & Distance Vector"],
     githubUrl: "https://github.com/dean-leveneur/mapmynet",
     detailPath: "/projets/mapmynet",
-    image: "./images/mapmynet-cover.svg",
+    image: "./images/mapmynet-cover.png",
     
     context: "Visualiser et comprendre la reconvergence dynamique des tables de routage IP face à des pannes imprévues sur une topologie complexe.",
     whatWasDone: [
@@ -86,7 +86,7 @@ export const projectsData = [
     techStack: ["Python", "Flask", "OpenAI LLM API", "IMAP / SMTP"],
     githubUrl: "https://github.com/dean-leveneur/RunMail",
     detailPath: "/projets/run-helico-ai",
-    image: "./images/run-helico-cover.svg",
+    image: "./images/runmail-cover.png",
     
     context: "Traiter automatiquement ~50 demandes e-mails clients par jour pour une entreprise sur l'île de La Réunion (Run Hélico) sans délai de réponse manuel.",
     whatWasDone: [
