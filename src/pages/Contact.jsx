@@ -119,13 +119,15 @@ export default function Contact() {
           </a>
 
           <a
-            href="/cv_dean_leveneur_ats.pdf"
-            download
+            href="./cv_dean_leveneur_ats.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            download="cv_dean_leveneur_ats.pdf"
             className="p-5 rounded-xl bg-minimal-card border border-minimal-border hover:border-minimal-dark transition-smooth flex items-center justify-between text-xs font-bold text-minimal-dark shadow-sm"
           >
             <div className="flex items-center gap-2">
               <FileText className="w-4 h-4 text-minimal-dark" />
-              <span>CV (PDF)</span>
+              <span>Télécharger CV (PDF)</span>
             </div>
             <ArrowUpRight className="w-4 h-4 text-minimal-muted" />
           </a>

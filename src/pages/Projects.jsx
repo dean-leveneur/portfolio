@@ -29,10 +29,15 @@ export default function Projects() {
             className="group rounded-xl bg-minimal-card border border-minimal-border hover:border-minimal-dark transition-smooth p-6 flex flex-col justify-between space-y-6 shadow-sm hover:shadow-md"
           >
             <div className="space-y-4">
-              <div className="w-full h-44 rounded-lg bg-minimal-bg border border-minimal-border flex items-center justify-center p-4 group-hover:bg-minimal-accentBg/30 transition-colors">
-                <span className="font-mono text-xs text-minimal-muted font-semibold uppercase">
-                  [{project.category}]
-                </span>
+              <div className="w-full h-52 rounded-lg bg-minimal-bg border border-minimal-border overflow-hidden flex items-center justify-center p-2 group-hover:opacity-95 transition-opacity">
+                <img 
+                  src={project.image} 
+                  alt={project.title}
+                  className="w-full h-full object-contain" 
+                  onError={(e) => {
+                    e.target.style.display = 'none';
+                  }}
+                />
               </div>
 
               <div className="space-y-2">

@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 360" fill="none">
+  <rect width="600" height="360" rx="12" fill="#111827"/>
+  
+  <!-- Subtle CAD Grid -->
+  <path d="M0 60H600M0 120H600M0 180H600M0 240H600M0 300H600" stroke="#1F2937" stroke-width="1"/>
+  <path d="M100 0V360M200 0V360M300 0V360M400 0V360M500 0V360" stroke="#1F2937" stroke-width="1"/>
+  
+  <!-- Network Links -->
+  <line x1="120" y1="180" x2="260" y2="100" stroke="#374151" stroke-width="2"/>
+  <line x1="120" y1="180" x2="260" y2="260" stroke="#374151" stroke-width="2"/>
+  <line x1="260" y1="100" x2="440" y2="100" stroke="#EF4444" stroke-width="3" stroke-dasharray="6 6"/> <!-- Failed Link -->
+  <line x1="260" y1="260" x2="440" y2="260" stroke="#10B981" stroke-width="4"/> <!-- Active Dijkstra Shortest Path -->
+  <line x1="260" y1="100" x2="260" y2="260" stroke="#374151" stroke-width="2"/>
+  <line x1="440" y1="100" x2="520" y2="180" stroke="#374151" stroke-width="2"/>
+  <line x1="440" y1="260" x2="520" y2="180" stroke="#10B981" stroke-width="4"/>
+
+  <!-- Router Nodes -->
+  <circle cx="120" cy="180" r="20" fill="#1F2937" stroke="#6B7280" stroke-width="3"/>
+  <text x="120" y="184" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="700" fill="#FFFFFF">R1</text>
+
+  <circle cx="260" cy="100" r="20" fill="#1F2937" stroke="#6B7280" stroke-width="3"/>
+  <text x="260" y="104" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="700" fill="#FFFFFF">R2</text>
+
+  <circle cx="260" cy="260" r="20" fill="#10B981" stroke="#FFFFFF" stroke-width="3"/>
+  <text x="260" y="264" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="700" fill="#FFFFFF">R3</text>
+
+  <circle cx="440" cy="100" r="20" fill="#991B1B" stroke="#EF4444" stroke-width="3"/> <!-- Failed Node -->
+  <text x="440" y="104" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="700" fill="#EF4444">R4 ⚠</text>
+
+  <circle cx="440" cy="260" r="20" fill="#10B981" stroke="#FFFFFF" stroke-width="3"/>
+  <text x="440" y="264" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="700" fill="#FFFFFF">R5</text>
+
+  <circle cx="520" cy="180" r="20" fill="#1F2937" stroke="#6B7280" stroke-width="3"/>
+  <text x="520" y="184" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="700" fill="#FFFFFF">R6</text>
+
+  <!-- Overlay Telemetry Banner -->
+  <rect x="40" y="30" width="260" height="40" rx="6" fill="#1F2937" stroke="#374151"/>
+  <text x="55" y="55" font-family="'JetBrains Mono', monospace" font-size="11" fill="#10B981">● DIJKSTRA RECALCULATED: R1➔R3➔R5➔R6</text>
+</svg>

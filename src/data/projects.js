@@ -10,8 +10,8 @@ export const projectsData = [
     techStack: ["Arduino", "BLE 4.2+", "Flutter / Dart", "Capteurs Haptiques"],
     githubUrl: "https://github.com/dean-leveneur/escablind",
     detailPath: "/projets/escablind",
+    image: "./images/escablind-cover.svg",
     
-    // Minimal direct text
     context: "En escalade, repérer les prises sans voir la voie nécessite une assistance constante. EscaBlind permet une autonomie sur le mur.",
     whatWasDone: [
       "Conception d'une carte microcontrôleur Arduino avec gestion BLE à latence < 40ms.",
@@ -35,6 +35,7 @@ export const projectsData = [
     techStack: ["Python", "Tkinter", "Dijkstra & A*", "Link State & Distance Vector"],
     githubUrl: "https://github.com/dean-leveneur/mapmynet-routing",
     detailPath: "/projets/mapmynet",
+    image: "./images/mapmynet-cover.svg",
     
     context: "Visualiser comment les tables de routage s'adaptent lors d'une panne soudaine de lien ou de routeur.",
     whatWasDone: [
@@ -59,6 +60,7 @@ export const projectsData = [
     techStack: ["Python", "NumPy & SciPy", "Runge-Kutta 4 (RK4)", "Banc MDF"],
     githubUrl: "https://github.com/dean-leveneur/double-pendulum-chaos",
     detailPath: "/projets/double-pendule",
+    image: "./images/double-pendulum-cover.svg",
     
     context: "Prédire la transition de l'ordre au chaos dans un système à forte sensibilité aux conditions initiales.",
     whatWasDone: [
@@ -83,6 +85,7 @@ export const projectsData = [
     techStack: ["Python", "Flask", "OpenAI API", "IMAP / SMTP"],
     githubUrl: "https://github.com/dean-leveneur/run-helico-ai-assistant",
     detailPath: "/projets/run-helico-ai",
+    image: "./images/run-helico-cover.svg",
     
     context: "Réduire le temps de réponse manuel sur des dizaines de demandes de réservation quotidiennes.",
     whatWasDone: [
@@ -107,6 +110,7 @@ export const projectsData = [
     techStack: ["Glide App", "Calculateur de Marges", "Data Modeling"],
     githubUrl: "https://github.com/dean-leveneur/inventory-sales-app",
     detailPath: "/projets/inventory-app",
+    image: "./images/inventory-glide-app.png",
     
     context: "Permettre la saisie rapide des ventes au comptoir et la mise à jour instantanée du stock sans tableur complexe.",
     whatWasDone: [

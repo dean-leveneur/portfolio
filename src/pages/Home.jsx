@@ -72,12 +72,17 @@ export default function Home() {
               to={project.detailPath}
               className="group rounded-xl bg-minimal-card border border-minimal-border hover:border-minimal-dark transition-smooth overflow-hidden flex flex-col justify-between p-6 space-y-6 shadow-sm hover:shadow-md"
             >
-              {/* Card Visual Placeholder / Metadata */}
+              {/* Project Image Illustration */}
               <div className="space-y-4">
-                <div className="w-full h-40 rounded-lg bg-minimal-bg border border-minimal-border/80 flex items-center justify-center p-4 group-hover:bg-minimal-accentBg/30 transition-colors">
-                  <div className="font-mono text-xs text-minimal-muted font-semibold uppercase tracking-wider text-center">
-                    [{project.category}]
-                  </div>
+                <div className="w-full h-44 rounded-lg bg-minimal-bg border border-minimal-border/80 overflow-hidden flex items-center justify-center group-hover:opacity-95 transition-opacity">
+                  <img 
+                    src={project.image} 
+                    alt={project.title}
+                    className="w-full h-full object-contain p-2" 
+                    onError={(e) => {
+                      e.target.style.display = 'none';
+                    }}
+                  />
                 </div>
 
                 <div className="space-y-2">
