@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowUpRight, ArrowRight } from 'lucide-react';
-import { profileData } from '../data/profile';
 import { projectsData } from '../data/projects';
 
 export default function Home() {

@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { NavLink, Link } from 'react-router-dom';
 import { Menu, X, ArrowUpRight } from 'lucide-react';
-import { profileData } from '../data/profile';
 
 export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
