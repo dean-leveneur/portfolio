@@ -1,22 +1,14 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
-  <rect width="64" height="64" rx="16" fill="#090D16"/>
-  <rect x="2" y="2" width="60" height="60" rx="14" stroke="url(#gradient-border)" stroke-width="1.5" stroke-opacity="0.5"/>
-  <path d="M16 20H26C32 20 36 23.5 36 29.5C36 35.5 32 39 26 39H16V20Z" fill="url(#gradient-d)"/>
-  <path d="M21 24.5H25.5C28.5 24.5 31 26 31 29.5C31 33 28.5 34.5 25.5 34.5H21V24.5Z" fill="#090D16"/>
-  <path d="M34 20H40V39.5H48V44H34V20Z" fill="url(#gradient-l)"/>
-  <circle cx="48" cy="20" r="3.5" fill="#10B981"/>
-  <defs>
-    <linearGradient id="gradient-border" x1="0" y1="0" x2="64" y2="64" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#38BDF8"/>
-      <stop offset="1" stop-color="#818CF8"/>
-    </linearGradient>
-    <linearGradient id="gradient-d" x1="16" y1="20" x2="36" y2="39" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#38BDF8"/>
-      <stop offset="1" stop-color="#6366F1"/>
-    </linearGradient>
-    <linearGradient id="gradient-l" x1="34" y1="20" x2="48" y2="44" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#818CF8"/>
-      <stop offset="1" stop-color="#A855F7"/>
-    </linearGradient>
-  </defs>
+<svg width="64" height="64" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+  <rect width="64" height="64" rx="14" fill="#111827"/>
+  <text
+    x="32"
+    y="34"
+    text-anchor="middle"
+    dominant-baseline="central"
+    font-family="Helvetica, Arial, sans-serif"
+    font-size="26"
+    font-weight="600"
+    letter-spacing="0.5"
+    fill="#F9FAFB"
+  >DL</text>
 </svg>
