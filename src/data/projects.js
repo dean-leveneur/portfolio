@@ -5,22 +5,23 @@ export const projectsData = [
     featured: true,
     title: "EscaBlind — Guidage Haptique pour Escalade Inclusive",
     category: "Embarqué & IoT",
-    tagline: "Aide à l'escalade pour personnes malvoyantes — Système hybride Arduino, BLE 4.2 et Flutter.",
+    tagline: "Dispositif d'aide à l'escalade pour personnes malvoyantes — Balises UWB Pozyx, BLE, vibreur haptique PWM et application Flutter.",
     period: "2023 – 2024",
-    techStack: ["Arduino / ESP32", "BLE 4.2+", "Flutter / Dart", "Capteurs Haptiques"],
+    techStack: ["Balises UWB Pozyx", "Arduino / ESP32", "BLE 4.2+", "Vibreur Haptique (PWM)", "Flutter / Dart (TTS)"],
     githubUrl: "https://github.com/dean-leveneur/escablind",
     detailPath: "/projets/escablind",
     image: "./images/escablind-cover.svg",
     
-    context: "En escalade libre ou en salle, repérer les prises sans guidage visuel requiert une assistance vocale permanente. EscaBlind apporte une autonomie complète au grimpeur sur le mur.",
+    context: "Permettre à une personne malvoyante ou non-voyante de grimpée en toute autonomie sur un mur d'escalade grâce au positionnement ultra-précis UWB Pozyx, un guidage vocal oralisé et un retour haptique par vibration.",
     whatWasDone: [
-      "Conception du firmware Arduino/ESP32 embarqué avec gestion de liaison Bluetooth Low Energy (latence < 40ms).",
-      "Développement de l'application mobile Flutter/Dart gérant le retour haptique (vibrations rythmées) et le guidage vocal spatialisé.",
-      "Modélisation du protocole de transmission des coordonnées de prises et d'orientation du grimpeur."
+      "Intégration des balises UWB Pozyx pour la géolocalisation 3D exacte du grimpeur et protocole BLE d'appairage avec le smartphone.",
+      "Développement du firmware Arduino contrôlant un vibreur haptique avec intensité PWM proportionnelle à la proximité de la cible.",
+      "Conception de l'application Flutter intégrant la création de parcours (enregistrement de positions successives) et la sélection de voies.",
+      "Implémentation du guidage vocal en temps réel énonçant à l'oral les coordonnées relatives (X, Y, Z) de la prochaine prise par rapport à l'Arduino."
     ],
     results: [
-      "Prototype hardware et mobile validé sur mur d'escalade d'essai.",
-      "Appairage BLE à reconnexion automatique et guidage fluide sans latence perçue."
+      "Validation expérimentale sur mur d'escalade d'essai avec guidage centimétrique haptique et vocal.",
+      "Autonomie complète du grimpeur sans besoin d'assistance humaine permanente."
     ]
   },
 
