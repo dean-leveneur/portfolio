@@ -15,20 +15,29 @@ export default function CaseStudyEscablind() {
         { label: 'EscaBlind' }
       ]} />
 
-      {/* Hero Cover Card */}
+      {/* Hero Cover Card with Image */}
       <div className="space-y-6 border-b border-minimal-border pb-8">
-        <div className="w-full h-64 sm:h-80 rounded-xl bg-minimal-card border border-minimal-border flex items-center justify-center p-6 text-center">
-          <div className="space-y-2">
-            <span className="font-mono text-xs text-minimal-muted uppercase tracking-wider">
-              [{project.category} • {project.period}]
-            </span>
-            <h1 className="font-bold text-3xl sm:text-4xl text-minimal-dark tracking-tight">
-              {project.title}
-            </h1>
-          </div>
+        <div className="w-full h-64 sm:h-96 rounded-xl bg-minimal-card border border-minimal-border overflow-hidden flex items-center justify-center p-4">
+          <img 
+            src={project.image} 
+            alt={project.title} 
+            className="w-full h-full object-contain"
+          />
         </div>
 
-        <div className="flex flex-wrap items-center justify-between gap-4 font-mono text-xs">
+        <div className="space-y-2">
+          <div className="font-mono text-xs text-minimal-muted uppercase tracking-wider">
+            [{project.category} • {project.period}]
+          </div>
+          <h1 className="font-bold text-3xl sm:text-4xl text-minimal-dark tracking-tight">
+            {project.title}
+          </h1>
+          <p className="text-sm text-minimal-muted leading-relaxed font-medium">
+            {project.tagline}
+          </p>
+        </div>
+
+        <div className="flex flex-wrap items-center justify-between gap-4 font-mono text-xs pt-2">
           <div className="flex flex-wrap gap-2">
             {project.techStack.map((tech, i) => (
               <span key={i} className="px-2.5 py-1 rounded bg-minimal-card text-minimal-dark border border-minimal-border">
@@ -37,22 +46,23 @@ export default function CaseStudyEscablind() {
             ))}
           </div>
 
-          <a 
-            href={project.githubUrl} 
-            target="_blank" 
-            rel="noopener noreferrer"
-            className="px-3.5 py-1.5 rounded bg-minimal-dark text-white hover:bg-black transition-smooth flex items-center gap-1.5 font-sans font-medium text-xs"
-          >
-            <Github className="w-3.5 h-3.5" />
-            <span>Code Source</span>
-          </a>
+          {project.githubUrl && (
+            <a 
+              href={project.githubUrl} 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="px-3.5 py-1.5 rounded bg-minimal-dark text-white hover:bg-black transition-smooth flex items-center gap-1.5 font-sans font-medium text-xs"
+            >
+              <Github className="w-3.5 h-3.5" />
+              <span>Dépôt GitHub Réel</span>
+            </a>
+          )}
         </div>
       </div>
 
-      {/* Short Direct Sections (Contexte, Ce qui a été fait, Résultat) */}
+      {/* Short Direct Sections */}
       <div className="space-y-10 text-minimal-dark text-sm sm:text-base leading-relaxed">
         
-        {/* Section 1: Contexte */}
         <section className="space-y-3">
           <h2 className="font-bold text-lg text-minimal-dark tracking-tight">
             Contexte
@@ -62,7 +72,6 @@ export default function CaseStudyEscablind() {
           </p>
         </section>
 
-        {/* Section 2: Ce qui a été fait */}
         <section className="space-y-3">
           <h2 className="font-bold text-lg text-minimal-dark tracking-tight">
             Ce qui a été fait
@@ -77,7 +86,6 @@ export default function CaseStudyEscablind() {
           </ul>
         </section>
 
-        {/* Section 3: Résultat */}
         <section className="space-y-3">
           <h2 className="font-bold text-lg text-minimal-dark tracking-tight">
             Résultat

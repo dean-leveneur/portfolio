@@ -12,23 +12,32 @@ export default function CaseStudyRunHelico() {
       
       <Breadcrumbs items={[
         { label: 'Projets', path: '/projets' },
-        { label: 'Run Hélico (Assistant IA)' }
+        { label: 'Run Hélico (RunMail)' }
       ]} />
 
-      {/* Hero Cover Card */}
+      {/* Hero Cover Card with Image */}
       <div className="space-y-6 border-b border-minimal-border pb-8">
-        <div className="w-full h-64 sm:h-80 rounded-xl bg-minimal-card border border-minimal-border flex items-center justify-center p-6 text-center">
-          <div className="space-y-2">
-            <span className="font-mono text-xs text-minimal-muted uppercase tracking-wider">
-              [{project.category} • {project.period}]
-            </span>
-            <h1 className="font-bold text-3xl sm:text-4xl text-minimal-dark tracking-tight">
-              {project.title}
-            </h1>
-          </div>
+        <div className="w-full h-64 sm:h-96 rounded-xl bg-minimal-card border border-minimal-border overflow-hidden flex items-center justify-center p-4">
+          <img 
+            src={project.image} 
+            alt={project.title} 
+            className="w-full h-full object-contain"
+          />
         </div>
 
-        <div className="flex flex-wrap items-center justify-between gap-4 font-mono text-xs">
+        <div className="space-y-2">
+          <div className="font-mono text-xs text-minimal-muted uppercase tracking-wider">
+            [{project.category} • {project.period}]
+          </div>
+          <h1 className="font-bold text-3xl sm:text-4xl text-minimal-dark tracking-tight">
+            {project.title}
+          </h1>
+          <p className="text-sm text-minimal-muted leading-relaxed font-medium">
+            {project.tagline}
+          </p>
+        </div>
+
+        <div className="flex flex-wrap items-center justify-between gap-4 font-mono text-xs pt-2">
           <div className="flex flex-wrap gap-2">
             {project.techStack.map((tech, i) => (
               <span key={i} className="px-2.5 py-1 rounded bg-minimal-card text-minimal-dark border border-minimal-border">
@@ -37,15 +46,17 @@ export default function CaseStudyRunHelico() {
             ))}
           </div>
 
-          <a 
-            href={project.githubUrl} 
-            target="_blank" 
-            rel="noopener noreferrer"
-            className="px-3.5 py-1.5 rounded bg-minimal-dark text-white hover:bg-black transition-smooth flex items-center gap-1.5 font-sans font-medium text-xs"
-          >
-            <Github className="w-3.5 h-3.5" />
-            <span>Code Source</span>
-          </a>
+          {project.githubUrl && (
+            <a 
+              href={project.githubUrl} 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="px-3.5 py-1.5 rounded bg-minimal-dark text-white hover:bg-black transition-smooth flex items-center gap-1.5 font-sans font-medium text-xs"
+            >
+              <Github className="w-3.5 h-3.5" />
+              <span>Dépôt GitHub Réel (RunMail)</span>
+            </a>
+          )}
         </div>
       </div>
 

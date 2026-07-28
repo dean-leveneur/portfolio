@@ -33,7 +33,7 @@ export const projectsData = [
     tagline: "Simulateur dynamique d'algorithmes de routage IP avec injection de pannes réseau en direct.",
     period: "2025",
     techStack: ["Python", "Tkinter", "Dijkstra & A*", "Link State & Distance Vector"],
-    githubUrl: "https://github.com/dean-leveneur/mapmynet-routing",
+    githubUrl: "https://github.com/dean-leveneur/mapmynet",
     detailPath: "/projets/mapmynet",
     image: "./images/mapmynet-cover.svg",
     
@@ -58,7 +58,7 @@ export const projectsData = [
     tagline: "Résolution d'équations différentielles non-linéaires par RK4, exposants de Lyapunov et banc MDF.",
     period: "2025",
     techStack: ["Python", "NumPy & SciPy", "Runge-Kutta 4 (RK4)", "Banc MDF"],
-    githubUrl: "https://github.com/dean-leveneur/double-pendulum-chaos",
+    githubUrl: "https://github.com/dean-leveneur/double-pendulum",
     detailPath: "/projets/double-pendule",
     image: "./images/double-pendulum-cover.svg",
     
@@ -83,7 +83,7 @@ export const projectsData = [
     tagline: "Assistant LLM autonome traitant ~50 e-mails clients par jour pour une entreprise sur l'île de La Réunion.",
     period: "2026",
     techStack: ["Python", "Flask", "OpenAI API", "IMAP / SMTP"],
-    githubUrl: "https://github.com/dean-leveneur/run-helico-ai-assistant",
+    githubUrl: "https://github.com/dean-leveneur/RunMail",
     detailPath: "/projets/run-helico-ai",
     image: "./images/run-helico-cover.svg",
     
@@ -108,7 +108,7 @@ export const projectsData = [
     tagline: "Application mobile métier pour le suivi du chiffre d'affaires et la gestion des stocks en temps réel.",
     period: "2025",
     techStack: ["Glide App", "Calculateur de Marges", "Data Modeling"],
-    githubUrl: "https://github.com/dean-leveneur/inventory-sales-app",
+    githubUrl: null, // No GitHub repository for Glide App
     detailPath: "/projets/inventory-app",
     image: "./images/inventory-glide-app.png",
     
