@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 360" fill="none">
+  <rect width="600" height="360" rx="12" fill="#FAFAFA"/>
+  
+  <!-- Subtle Grid -->
+  <path d="M0 60H600M0 120H600M0 180H600M0 240H600M0 300H600" stroke="#E5E7EB" stroke-width="1"/>
+  <path d="M100 0V360M200 0V360M300 0V360M400 0V360M500 0V360" stroke="#E5E7EB" stroke-width="1"/>
+  
+  <!-- Chaotic Trajectory Curves in Phase Space -->
+  <path d="M 300 120 C 350 180, 420 80, 460 200 C 500 320, 380 340, 240 280 C 120 220, 150 100, 260 80 C 340 60, 480 140, 440 240" 
+        fill="none" stroke="#2563EB" stroke-width="2.5" stroke-linecap="round"/>
+        
+  <path d="M 300 120 C 352 182, 424 78, 468 205 C 508 325, 375 345, 235 275 C 115 215, 145 95, 255 75 C 335 55, 475 135, 435 235" 
+        fill="none" stroke="#D97706" stroke-width="1.5" stroke-dasharray="3 3"/>
+
+  <!-- Pendulum Pivot & Rods -->
+  <circle cx="300" cy="80" r="8" fill="#111827"/>
+  <line x1="300" y1="80" x2="350" y2="150" stroke="#111827" stroke-width="4"/>
+  <circle cx="350" cy="150" r="12" fill="#111827"/>
+  <line x1="350" y1="150" x2="440" y2="240" stroke="#2563EB" stroke-width="3"/>
+  <circle cx="440" cy="240" r="14" fill="#2563EB"/>
+
+  <!-- Lyapunov Badge -->
+  <rect x="40" y="40" width="220" height="44" rx="8" fill="#FFFFFF" stroke="#E5E7EB" stroke-width="2"/>
+  <text x="55" y="66" font-family="'JetBrains Mono', monospace" font-size="12" font-weight="700" fill="#111827">λ_max = 0.842 (RK4 Solver)</text>
+</svg>

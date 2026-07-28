@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 360" fill="none">
+  <rect width="600" height="360" rx="12" fill="#F3F4F6"/>
+  
+  <!-- Subtle Grid Background -->
+  <path d="M0 60H600M0 120H600M0 180H600M0 240H600M0 300H600" stroke="#E5E7EB" stroke-width="1"/>
+  <path d="M100 0V360M200 0V360M300 0V360M400 0V360M500 0V360" stroke="#E5E7EB" stroke-width="1"/>
+  
+  <!-- Climbing Wall Holds -->
+  <circle cx="120" cy="240" r="18" fill="#D1D5DB" />
+  <circle cx="220" cy="160" r="22" fill="#D1D5DB" />
+  <circle cx="360" cy="220" r="20" fill="#D1D5DB" />
+  <circle cx="480" cy="110" r="26" fill="#111827" stroke="#2563EB" stroke-width="4"/>
+  
+  <!-- Active Target Hold Pulses -->
+  <circle cx="480" cy="110" r="40" fill="none" stroke="#2563EB" stroke-width="2" stroke-dasharray="4 4"/>
+  <circle cx="480" cy="110" r="55" fill="none" stroke="#2563EB" stroke-width="1" stroke-dasharray="2 2"/>
+
+  <!-- BLE Signals & Trajectory Vector -->
+  <path d="M220 160 Q 320 120 480 110" fill="none" stroke="#2563EB" stroke-width="3" stroke-dasharray="6 6"/>
+
+  <!-- Arduino / Sensor Controller Node Card -->
+  <rect x="50" y="50" width="180" height="80" rx="8" fill="#FFFFFF" stroke="#E5E7EB" stroke-width="2"/>
+  <text x="70" y="80" font-family="'JetBrains Mono', monospace" font-size="12" font-weight="700" fill="#111827">Arduino + BLE 4.2</text>
+  <text x="70" y="100" font-family="'Plus Jakarta Sans', sans-serif" font-size="10" fill="#6B7280">Capteurs Haptiques (RTT &lt; 40ms)</text>
+  
+  <!-- App Guidance Audio Indicator Badge -->
+  <rect x="360" y="280" width="190" height="44" rx="22" fill="#111827"/>
+  <text x="390" y="306" font-family="'Plus Jakarta Sans', sans-serif" font-size="12" font-weight="700" fill="#FFFFFF">🔊 Audio Spatialisé &amp; Haptique</text>
+</svg>
