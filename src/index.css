@@ -1,0 +1,51 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    background-color: #080C14;
+    color: #F8FAFC;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    overflow-x: hidden;
+  }
+}
+
+/* Custom CAD Technical Grid overlay */
+.tech-grid-bg {
+  background-size: 32px 32px;
+  background-image: 
+    linear-gradient(to right, rgba(35, 47, 71, 0.25) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(35, 47, 71, 0.25) 1px, transparent 1px);
+}
+
+.tech-dots-bg {
+  background-size: 24px 24px;
+  background-image: radial-gradient(rgba(0, 229, 255, 0.12) 1px, transparent 0);
+}
+
+/* Custom telemetry glow animations */
+@keyframes pulse-subtle {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.6; transform: scale(0.98); }
+}
+
+.animate-pulse-subtle {
+  animation: pulse-subtle 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* Technical custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #080C14;
+}
+::-webkit-scrollbar-thumb {
+  background: #1C2842;
+  border-radius: 4px;
+  border: 1px solid #232F47;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #00E5FF;
+}
