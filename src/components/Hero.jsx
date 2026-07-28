@@ -43,7 +43,7 @@ export default function Hero() {
                 <div>
                   <div className="text-tech-light font-semibold">Zones Géographiques</div>
                   <div className="text-tech-muted text-[11px] mt-0.5">
-                    • Lyon / Villeurbanne (TCL)<br />
+                    • Lyon / Villeurbanne<br />
                     • La Réunion (Tampon / St-Pierre)
                   </div>
                 </div>
@@ -55,7 +55,7 @@ export default function Hero() {
                   <div className="text-tech-light font-semibold">Disponibilité Stage</div>
                   <div className="text-tech-muted text-[11px] mt-0.5">
                     Mi-Juin à Mi-Septembre 2027<br />
-                    Convention Jumplyn validée
+                    Durée : 8 à 14 semaines
                   </div>
                 </div>
               </div>

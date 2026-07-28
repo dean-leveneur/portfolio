@@ -8,7 +8,7 @@ export default function About() {
       
       <Breadcrumbs items={[{ label: 'À propos' }]} />
 
-      {/* Header with Monochrome Black INSA Lyon Logo */}
+      {/* Header with Official INSA Lyon Logo */}
       <div className="border-b border-minimal-border pb-8 space-y-6">
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-6">
           <div className="space-y-2">
@@ -20,11 +20,11 @@ export default function About() {
             </p>
           </div>
 
-          {/* Monochrome Black INSA Lyon Vector Logo */}
+          {/* Official INSA Lyon Logo */}
           <div className="shrink-0 p-3 rounded-lg bg-white border border-minimal-border shadow-sm flex items-center justify-center">
             <img 
-              src="./images/insa-lyon-logo.svg" 
-              alt="INSA Lyon Logo Noir" 
+              src="./images/insa-lyon-logo.png" 
+              alt="Logo INSA Lyon Officiel" 
               className="h-12 w-auto object-contain"
             />
           </div>

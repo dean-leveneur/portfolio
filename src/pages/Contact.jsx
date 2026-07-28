@@ -33,18 +33,14 @@ export default function Contact() {
           // CRITÈRES DE STAGE 3IF
         </h2>
 
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 font-mono text-xs text-minimal-muted">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 font-mono text-xs text-minimal-muted">
           <div>
-            <div className="font-bold text-minimal-dark">Durée</div>
-            <div>8 à 14 semaines (Juin 2027)</div>
+            <div className="font-bold text-minimal-dark">Durée & Période</div>
+            <div>8 à 14 semaines (à partir de mi-juin 2027)</div>
           </div>
           <div>
             <div className="font-bold text-minimal-dark">Localisation</div>
-            <div>Lyon (TCL) / La Réunion</div>
-          </div>
-          <div>
-            <div className="font-bold text-minimal-dark">Convention</div>
-            <div>Validée Jumplyn INSA 3IF</div>
+            <div>Lyon / Villeurbanne ou La Réunion</div>
           </div>
         </div>
       </div>
@@ -119,10 +115,10 @@ export default function Contact() {
           </a>
 
           <a
-            href="./cv_dean_leveneur_ats.pdf"
+            href="./CV_Dean_LEVENEUR.pdf"
             target="_blank"
             rel="noopener noreferrer"
-            download="cv_dean_leveneur_ats.pdf"
+            download="CV_Dean_LEVENEUR.pdf"
             className="p-5 rounded-xl bg-minimal-card border border-minimal-border hover:border-minimal-dark transition-smooth flex items-center justify-between text-xs font-bold text-minimal-dark shadow-sm"
           >
             <div className="flex items-center gap-2">

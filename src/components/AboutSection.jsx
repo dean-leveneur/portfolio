@@ -94,7 +94,7 @@ export default function AboutSection() {
             <div className="space-y-2 font-mono text-xs text-tech-muted pt-2">
               <div className="flex items-center gap-2">
                 <CheckCircle2 className="w-4 h-4 text-tech-emerald" />
-                <span>Convention officielle INSA Lyon via la plateforme <strong className="text-tech-light">Jumplyn</strong></span>
+                <span>Formation d'ingénieur visée par la CTI (Compétences 3IF)</span>
               </div>
               <div className="flex items-center gap-2">
                 <CheckCircle2 className="w-4 h-4 text-tech-emerald" />

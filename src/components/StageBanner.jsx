@@ -17,7 +17,7 @@ export default function StageBanner() {
             <div className="lg:col-span-8 space-y-4">
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded bg-tech-emerald/10 border border-tech-emerald/30 text-tech-emerald font-mono text-xs font-semibold">
                 <ShieldCheck className="w-4 h-4" />
-                CONVENTION DE STAGE OFFICIELLE INSA LYON (3IF)
+                STAGE INGÉNIEUR INSA LYON (3IF)
               </div>
 
               <h2 className="font-display text-2xl sm:text-3xl font-bold text-tech-light">
@@ -34,8 +34,8 @@ export default function StageBanner() {
                   <span>Durée : <strong className="text-tech-cyan">8 à 14 semaines</strong> (Juin 2027)</span>
                 </div>
                 <div className="flex items-center gap-2 p-2.5 rounded bg-tech-darkest/70 border border-tech-border/60">
-                  <FileCheck className="w-4 h-4 text-tech-emerald shrink-0" />
-                  <span>Convention : <strong className="text-tech-emerald">Jumplyn CTI validée</strong></span>
+                  <MapPin className="w-4 h-4 text-tech-cyan shrink-0" />
+                  <span>Secteurs : <strong className="text-tech-cyan">Lyon / Villeurbanne ou La Réunion</strong></span>
                 </div>
               </div>
             </div>

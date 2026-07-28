@@ -110,8 +110,8 @@ export default function ContactSection() {
               </div>
 
               <a
-                href="/cv_dean_leveneur_ats.pdf"
-                download
+                href="./CV_Dean_LEVENEUR.pdf"
+                download="CV_Dean_LEVENEUR.pdf"
                 className="w-full sm:w-auto px-4 py-2 rounded bg-tech-amber/10 hover:bg-tech-amber/20 border border-tech-amber/40 text-tech-amber font-mono text-xs font-bold transition-all text-center flex items-center justify-center gap-2"
               >
                 Télécharger le CV PDF
