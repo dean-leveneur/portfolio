@@ -10,7 +10,7 @@ export const projectsData = [
     techStack: ["Balises UWB Pozyx", "Arduino / ESP32", "BLE 4.2+", "Vibreur Haptique (PWM)", "Flutter / Dart (TTS)"],
     githubUrl: "https://github.com/dean-leveneur/escablind",
     detailPath: "/projets/escablind",
-    image: "./images/escablind-cover.svg",
+    image: "./images/escablind-cover.png",
     
     context: "Permettre à une personne malvoyante ou non-voyante de grimpée en toute autonomie sur un mur d'escalade grâce au positionnement ultra-précis UWB Pozyx, un guidage vocal oralisé et un retour haptique par vibration.",
     whatWasDone: [
