@@ -1,132 +1,88 @@
 import React, { useState } from 'react';
 import { NavLink, Link } from 'react-router-dom';
-import { Terminal, Menu, X, FileText, Check, Award } from 'lucide-react';
+import { Menu, X, ArrowUpRight } from 'lucide-react';
 import { profileData } from '../data/profile';
 
 export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [copied, setCopied] = useState(false);
-
-  const handleCopyEmail = () => {
-    navigator.clipboard.writeText(profileData.email);
-    setCopied(true);
-    setTimeout(() => setCopied(false), 2000);
-  };
 
   const navLinkClass = ({ isActive }) => 
-    `font-sans text-xs uppercase tracking-wider font-semibold transition-all border-b-2 py-1 ${
+    `text-sm font-medium transition-colors ${
       isActive 
-        ? 'border-blueprint text-blueprint font-bold' 
-        : 'border-transparent text-ink-muted hover:text-ink-dark'
+        ? 'text-minimal-dark font-bold border-b border-minimal-dark pb-0.5' 
+        : 'text-minimal-muted hover:text-minimal-dark'
     }`;
 
   return (
-    <header className="sticky top-0 z-50 bg-paper-bg/95 backdrop-blur-sm border-b border-paper-border py-4">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
+    <header className="sticky top-0 z-50 bg-minimal-bg/90 backdrop-blur-md border-b border-minimal-border py-5">
+      <div className="max-w-6xl mx-auto px-6 sm:px-8 flex items-center justify-between">
         
-        {/* Brand Logo & Editorial Stamp */}
-        <Link to="/" className="flex items-center gap-3 group">
-          <div className="w-10 h-10 rounded bg-paper-card border border-paper-border flex items-center justify-center font-mono font-bold text-blueprint text-sm shadow-sm group-hover:border-blueprint transition-colors">
+        {/* Minimal Brand */}
+        <Link to="/" className="group flex items-center gap-3">
+          <div className="w-8 h-8 rounded bg-minimal-dark text-white font-bold text-xs flex items-center justify-center font-mono">
             DL
           </div>
           <div>
-            <div className="font-display font-bold text-lg text-ink-dark group-hover:text-blueprint transition-colors flex items-center gap-2">
-              Dean LEVENEUR
-              <span className="font-mono text-[10px] px-1.5 py-0.5 rounded stamp-badge text-blueprint font-bold uppercase">
-                INSA 3IF
-              </span>
+            <div className="font-bold text-base text-minimal-dark group-hover:text-minimal-muted transition-colors">
+              Dean Leveneur
             </div>
-            <div className="font-mono text-[11px] text-ink-muted flex items-center gap-1.5">
-              <span className="w-2 h-2 rounded-full bg-emeraldSeal"></span>
-              CARNET D'INGÉNIERIE • STAGE 2027
+            <div className="text-[11px] font-mono text-minimal-muted">
+              INSA Lyon 3IF
             </div>
           </div>
         </Link>
 
-        {/* Desktop Nav Links */}
-        <nav className="hidden md:flex items-center gap-8 font-mono text-xs">
+        {/* Minimal Navigation */}
+        <nav className="hidden md:flex items-center gap-8 text-sm">
           <NavLink to="/" className={navLinkClass} end>
-            01. Accueil
+            Accueil
           </NavLink>
           <NavLink to="/projets" className={navLinkClass}>
-            02. Projets Phares
+            Projets
           </NavLink>
           <NavLink to="/a-propos" className={navLinkClass}>
-            03. À Propos & Cursus
+            À propos
           </NavLink>
           <NavLink to="/contact" className={navLinkClass}>
-            04. Contact & Stage
+            Contact
           </NavLink>
         </nav>
 
-        {/* Action Buttons */}
-        <div className="hidden lg:flex items-center gap-3 font-mono text-xs">
-          <button 
-            onClick={handleCopyEmail}
-            className="px-3 py-1.5 rounded bg-paper-card border border-paper-border hover:border-blueprint text-ink-muted hover:text-ink-dark transition-all flex items-center gap-1.5"
-            title="Copier l'e-mail"
-          >
-            {copied ? (
-              <>
-                <Check className="w-3.5 h-3.5 text-emeraldSeal" />
-                <span className="text-emeraldSeal font-bold">Email Copié !</span>
-              </>
-            ) : (
-              <>
-                <span className="text-blueprint font-semibold">email:</span> {profileData.email}
-              </>
-            )}
-          </button>
-
+        {/* Action Button */}
+        <div className="hidden sm:flex items-center gap-4">
           <Link 
             to="/contact" 
-            className="px-4 py-1.5 rounded bg-blueprint text-white font-sans font-bold text-xs hover:bg-blueprint-hover transition-all shadow-sm flex items-center gap-2"
+            className="px-4 py-2 rounded bg-minimal-dark text-white font-medium text-xs hover:bg-black transition-smooth flex items-center gap-1"
           >
-            Proposer un Stage
+            <span>Stage 2027</span>
+            <ArrowUpRight className="w-3.5 h-3.5" />
           </Link>
         </div>
 
         {/* Mobile Toggle */}
         <button 
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-          className="md:hidden p-2 rounded border border-paper-border bg-paper-card text-ink-dark"
+          className="md:hidden p-2 rounded text-minimal-muted hover:text-minimal-dark"
           aria-label="Toggle Navigation"
         >
-          {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+          {mobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
         </button>
       </div>
 
       {/* Mobile Drawer */}
       {mobileMenuOpen && (
-        <div className="md:hidden bg-paper-card border-b border-paper-border px-4 py-6 space-y-4 font-mono text-sm">
-          <NavLink 
-            to="/" 
-            onClick={() => setMobileMenuOpen(false)}
-            className="block text-ink-dark py-2 border-b border-paper-border/60"
-            end
-          >
-            01. Accueil
+        <div className="md:hidden bg-minimal-card border-b border-minimal-border px-6 py-6 space-y-4 text-sm font-medium">
+          <NavLink to="/" onClick={() => setMobileMenuOpen(false)} className="block py-1 text-minimal-dark" end>
+            Accueil
           </NavLink>
-          <NavLink 
-            to="/projets" 
-            onClick={() => setMobileMenuOpen(false)}
-            className="block text-ink-dark py-2 border-b border-paper-border/60"
-          >
-            02. Tous les Projets
+          <NavLink to="/projets" onClick={() => setMobileMenuOpen(false)} className="block py-1 text-minimal-dark">
+            Projets
           </NavLink>
-          <NavLink 
-            to="/a-propos" 
-            onClick={() => setMobileMenuOpen(false)}
-            className="block text-ink-dark py-2 border-b border-paper-border/60"
-          >
-            03. À Propos & Cursus INSA 3IF
+          <NavLink to="/a-propos" onClick={() => setMobileMenuOpen(false)} className="block py-1 text-minimal-dark">
+            À propos
           </NavLink>
-          <NavLink 
-            to="/contact" 
-            onClick={() => setMobileMenuOpen(false)}
-            className="block text-blueprint font-bold py-2"
-          >
-            04. Contact & Proposition de Stage
+          <NavLink to="/contact" onClick={() => setMobileMenuOpen(false)} className="block py-1 font-bold text-minimal-dark">
+            Contact
           </NavLink>
         </div>
       )}

@@ -4,49 +4,29 @@
 
 @layer base {
   body {
-    background-color: #F5F3EF;
-    color: #17191C;
-    font-family: 'Source Serif 4', serif;
-    overflow-x: hidden;
-  }
-  
-  h1, h2, h3, h4, h5, h6 {
-    font-family: 'Syne', 'Space Grotesk', sans-serif;
+    background-color: #FAFAFA;
+    color: #111827;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    letter-spacing: -0.01em;
   }
 }
 
-/* Technical Millimeter Graph Paper Grid */
-.paper-grid-bg {
-  background-size: 24px 24px;
-  background-image: 
-    linear-gradient(to right, rgba(228, 224, 215, 0.7) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(228, 224, 215, 0.7) 1px, transparent 1px);
+/* Smooth minimal transitions */
+.transition-smooth {
+  transition: all 0.2s ease-in-out;
 }
 
-.paper-grid-dense {
-  background-size: 12px 12px;
-  background-image: 
-    linear-gradient(to right, rgba(228, 224, 215, 0.5) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(228, 224, 215, 0.5) 1px, transparent 1px);
-}
-
-/* Technical blueprint stamp badge */
-.stamp-badge {
-  border: 1.5px dashed #1E3A8A;
-  background-color: rgba(30, 58, 138, 0.04);
-}
-
-/* Custom editorial scrollbar */
+/* Subtle clean scrollbar */
 ::-webkit-scrollbar {
-  width: 8px;
+  width: 6px;
 }
 ::-webkit-scrollbar-track {
-  background: #F5F3EF;
+  background: #FAFAFA;
 }
 ::-webkit-scrollbar-thumb {
-  background: #D6D1C7;
-  border-radius: 4px;
+  background: #E5E7EB;
+  border-radius: 3px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #1E3A8A;
+  background: #9CA3AF;
 }

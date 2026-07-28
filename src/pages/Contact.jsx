@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Breadcrumbs from '../components/Breadcrumbs';
 import { profileData } from '../data/profile';
-import { Mail, Linkedin, Github, FileText, Check, Copy, Send, MapPin, Calendar, ShieldCheck, Terminal } from 'lucide-react';
+import { Mail, Linkedin, Github, FileText, Check, Copy, ArrowUpRight } from 'lucide-react';
 
 export default function Contact() {
   const [copied, setCopied] = useState(false);
@@ -13,212 +13,122 @@ export default function Contact() {
   };
 
   return (
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 space-y-12">
+    <div className="max-w-4xl mx-auto px-6 sm:px-8 py-12 space-y-12">
       
-      {/* Breadcrumbs */}
-      <Breadcrumbs items={[{ label: 'Contact & Proposition de Stage' }]} />
+      <Breadcrumbs items={[{ label: 'Contact' }]} />
 
       {/* Header */}
-      <div className="border-b border-paper-border pb-6 space-y-2">
-        <div className="font-mono text-xs text-blueprint font-bold uppercase">// PRENDRE CONTACT DIRECTEMENT</div>
-        <h1 className="font-display text-3xl sm:text-4xl font-bold text-ink-dark">
-          Recherche de Stage Ingénieur — Été 2027
+      <div className="border-b border-minimal-border pb-6 space-y-2">
+        <h1 className="font-bold text-3xl text-minimal-dark tracking-tight">
+          Contact
         </h1>
-        <p className="text-ink-muted text-sm font-serif max-w-2xl">
-          N'hésitez pas à me contacter par e-mail ou via LinkedIn pour me proposer un sujet de stage ou échanger sur vos projets.
+        <p className="text-sm text-minimal-muted max-w-xl">
+          Recherche de stage ingénieur de 8 à 14 semaines à partir de mi-juin 2027.
         </p>
       </div>
 
-      {/* Internship Criteria Card */}
-      <div className="p-8 rounded-xl bg-paper-card border border-paper-border space-y-6 shadow-sm">
-        <div className="flex items-center gap-2 font-mono text-xs text-blueprint font-bold uppercase">
-          <ShieldCheck className="w-4 h-4 text-emeraldSeal" />
-          FICHE RECAPITULATIVE DE LA RECHERCHE DE STAGE 3IF
-        </div>
+      {/* Stage Criteria Minimal Summary */}
+      <div className="p-6 rounded-xl bg-minimal-card border border-minimal-border space-y-4 shadow-sm">
+        <h2 className="font-bold text-sm text-minimal-dark font-mono uppercase tracking-wider">
+          // CRITÈRES DE STAGE 3IF
+        </h2>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 font-mono text-xs text-ink-dark">
-          
-          <div className="p-4 rounded bg-paper-bg border border-paper-border space-y-2">
-            <div className="font-bold text-blueprint flex items-center gap-1.5">
-              <Calendar className="w-4 h-4" />
-              Période & Durée
-            </div>
-            <div className="text-ink-muted text-xs">
-              • Minimum <strong className="text-ink-dark">8 semaines</strong> (recommandé 12-14 sem.)<br />
-              • Début : <strong className="text-copper">Mi-Juin 2027</strong><br />
-              • Fin max : Mi-Septembre 2027
-            </div>
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 font-mono text-xs text-minimal-muted">
+          <div>
+            <div className="font-bold text-minimal-dark">Durée</div>
+            <div>8 à 14 semaines (Juin 2027)</div>
           </div>
-
-          <div className="p-4 rounded bg-paper-bg border border-paper-border space-y-2">
-            <div className="font-bold text-copper flex items-center gap-1.5">
-              <MapPin className="w-4 h-4" />
-              Zones Autorisées
-            </div>
-            <div className="text-ink-muted text-xs">
-              1. <strong className="text-ink-dark">Lyon & Villeurbanne</strong> (Métropole TCL)<br />
-              2. <strong className="text-ink-dark">La Réunion</strong> (Le Tampon / Saint-Pierre)
-            </div>
+          <div>
+            <div className="font-bold text-minimal-dark">Localisation</div>
+            <div>Lyon (TCL) / La Réunion</div>
           </div>
-
-          <div className="p-4 rounded bg-paper-bg border border-paper-border space-y-2">
-            <div className="font-bold text-emeraldSeal flex items-center gap-1.5">
-              <ShieldCheck className="w-4 h-4" />
-              Convention & Cadre
-            </div>
-            <div className="text-ink-muted text-xs">
-              • Validation par la plateforme <strong className="text-ink-dark">Jumplyn</strong><br />
-              • Entreprises (ESN, éditeur, grand groupe, startup)<br />
-              • Signature officielle INSA Lyon
-            </div>
+          <div>
+            <div className="font-bold text-minimal-dark">Convention</div>
+            <div>Validée Jumplyn INSA 3IF</div>
           </div>
-
         </div>
       </div>
 
-      <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+      {/* Direct Contact Links */}
+      <div className="space-y-4">
         
-        {/* Left Column: Direct Contacts & CV Download */}
-        <div className="lg:col-span-6 space-y-6">
-          
-          <div className="p-6 rounded-xl bg-paper-card border border-paper-border space-y-4 shadow-sm">
-            <h2 className="font-display font-bold text-xl text-ink-dark flex items-center gap-2">
-              <Terminal className="w-5 h-5 text-blueprint" />
-              Coordonnées Directes
-            </h2>
-
-            {/* Email Copy Card */}
-            <div className="p-4 rounded bg-paper-bg border border-paper-border flex items-center justify-between gap-4 font-mono text-xs">
-              <div className="flex items-center gap-2 text-ink-dark truncate">
-                <Mail className="w-4 h-4 text-blueprint shrink-0" />
-                <span className="truncate">{profileData.email}</span>
-              </div>
-
-              <button
-                onClick={handleCopyEmail}
-                className="px-3 py-1.5 rounded bg-paper-card hover:bg-paper-border border border-paper-border text-ink-dark transition-all shrink-0 flex items-center gap-1.5 font-bold"
-              >
-                {copied ? (
-                  <>
-                    <Check className="w-3.5 h-3.5 text-emeraldSeal" />
-                    <span className="text-emeraldSeal">Copié</span>
-                  </>
-                ) : (
-                  <>
-                    <Copy className="w-3.5 h-3.5" />
-                    <span>Copier</span>
-                  </>
-                )}
-              </button>
+        {/* Email Card */}
+        <div className="p-6 rounded-xl bg-minimal-card border border-minimal-border flex flex-col sm:flex-row items-center justify-between gap-4 shadow-sm">
+          <div className="flex items-center gap-3 text-sm">
+            <Mail className="w-5 h-5 text-minimal-dark" />
+            <div>
+              <div className="font-bold text-minimal-dark">{profileData.email}</div>
+              <div className="text-xs text-minimal-muted">E-mail principal</div>
             </div>
-
-            {/* Social Buttons */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2 font-mono text-xs">
-              <a
-                href={profileData.linkedin}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="p-3 rounded bg-paper-bg border border-paper-border hover:border-blueprint text-ink-dark hover:bg-paper-card transition-all flex items-center justify-center gap-2 font-bold"
-              >
-                <Linkedin className="w-4 h-4 text-[#0A66C2]" />
-                <span>LinkedIn / dean-leveneur</span>
-              </a>
-
-              <a
-                href={profileData.github}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="p-3 rounded bg-paper-bg border border-paper-border hover:border-blueprint text-ink-dark hover:bg-paper-card transition-all flex items-center justify-center gap-2 font-bold"
-              >
-                <Github className="w-4 h-4" />
-                <span>GitHub / dean-leveneur</span>
-              </a>
-            </div>
-
           </div>
 
-          {/* CV Download Card */}
-          <div className="p-6 rounded-xl bg-paper-card border border-paper-border flex flex-col sm:flex-row items-center justify-between gap-4 shadow-sm">
-            <div className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded bg-paper-bg border border-paper-border flex items-center justify-center text-copper">
-                <FileText className="w-5 h-5" />
-              </div>
-              <div>
-                <div className="font-display font-bold text-sm text-ink-dark">
-                  Curriculum Vitae (PDF ATS Format)
-                </div>
-                <div className="font-mono text-xs text-ink-muted">
-                  Dean LEVENEUR — INSA Lyon 3IF
-                </div>
-              </div>
-            </div>
+          <div className="flex items-center gap-2 w-full sm:w-auto">
+            <button
+              onClick={handleCopyEmail}
+              className="px-4 py-2 rounded border border-minimal-border hover:border-minimal-dark text-xs font-bold text-minimal-dark transition-smooth flex items-center justify-center gap-1.5 w-full sm:w-auto"
+            >
+              {copied ? (
+                <>
+                  <Check className="w-3.5 h-3.5 text-green-600" />
+                  <span className="text-green-600">Copié</span>
+                </>
+              ) : (
+                <>
+                  <Copy className="w-3.5 h-3.5" />
+                  <span>Copier l'email</span>
+                </>
+              )}
+            </button>
 
             <a
-              href="/cv_dean_leveneur_ats.pdf"
-              download
-              className="w-full sm:w-auto px-4 py-2.5 rounded bg-copper text-white font-mono text-xs font-bold hover:bg-copper-hover transition-all text-center"
+              href={`mailto:${profileData.email}`}
+              className="px-4 py-2 rounded bg-minimal-dark text-white hover:bg-black text-xs font-bold transition-smooth flex items-center justify-center gap-1 w-full sm:w-auto"
             >
-              Télécharger le CV PDF
+              <span>Envoyer</span>
+              <ArrowUpRight className="w-3.5 h-3.5" />
             </a>
           </div>
-
         </div>
 
-        {/* Right Column: Direct Mail Form */}
-        <div className="lg:col-span-6">
-          <div className="p-6 rounded-xl bg-paper-card border border-paper-border space-y-4 shadow-sm font-mono text-xs">
-            <div className="text-blueprint font-bold uppercase flex items-center gap-2">
-              <Send className="w-4 h-4" />
-              FORMULAIRE DE MESSAGE DIRECT
+        {/* Links Grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+          <a
+            href={profileData.linkedin}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="p-5 rounded-xl bg-minimal-card border border-minimal-border hover:border-minimal-dark transition-smooth flex items-center justify-between text-xs font-bold text-minimal-dark shadow-sm"
+          >
+            <div className="flex items-center gap-2">
+              <Linkedin className="w-4 h-4 text-[#0A66C2]" />
+              <span>LinkedIn</span>
             </div>
+            <ArrowUpRight className="w-4 h-4 text-minimal-muted" />
+          </a>
 
-            <form 
-              action={`mailto:${profileData.email}`}
-              method="post"
-              encType="text/plain"
-              className="space-y-4"
-            >
-              <div>
-                <label className="block text-ink-muted mb-1">Votre Nom & Entreprise / Organisation</label>
-                <input 
-                  type="text" 
-                  name="name" 
-                  required 
-                  placeholder="Ex: Marc Lemaire (Tech Lead / RH)" 
-                  className="w-full px-3 py-2 rounded bg-paper-bg border border-paper-border text-ink-dark focus:border-blueprint focus:outline-none"
-                />
-              </div>
+          <a
+            href={profileData.github}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="p-5 rounded-xl bg-minimal-card border border-minimal-border hover:border-minimal-dark transition-smooth flex items-center justify-between text-xs font-bold text-minimal-dark shadow-sm"
+          >
+            <div className="flex items-center gap-2">
+              <Github className="w-4 h-4" />
+              <span>GitHub</span>
+            </div>
+            <ArrowUpRight className="w-4 h-4 text-minimal-muted" />
+          </a>
 
-              <div>
-                <label className="block text-ink-muted mb-1">Objet</label>
-                <input 
-                  type="text" 
-                  name="subject" 
-                  required 
-                  placeholder="Proposition de sujet de stage INSA 3IF 2027" 
-                  className="w-full px-3 py-2 rounded bg-paper-bg border border-paper-border text-ink-dark focus:border-blueprint focus:outline-none"
-                />
-              </div>
-
-              <div>
-                <label className="block text-ink-muted mb-1">Détails de la mission</label>
-                <textarea 
-                  name="message" 
-                  rows="4" 
-                  required 
-                  placeholder="Bonjour Dean, nous serions intéressés par votre profil pour un stage de 12 semaines..." 
-                  className="w-full px-3 py-2 rounded bg-paper-bg border border-paper-border text-ink-dark focus:border-blueprint focus:outline-none"
-                ></textarea>
-              </div>
-
-              <button 
-                type="submit"
-                className="w-full py-3 rounded bg-blueprint text-white font-sans font-bold text-sm hover:bg-blueprint-hover transition-all shadow-sm flex items-center justify-center gap-2"
-              >
-                Envoyer le message ➔
-              </button>
-            </form>
-          </div>
+          <a
+            href="/cv_dean_leveneur_ats.pdf"
+            download
+            className="p-5 rounded-xl bg-minimal-card border border-minimal-border hover:border-minimal-dark transition-smooth flex items-center justify-between text-xs font-bold text-minimal-dark shadow-sm"
+          >
+            <div className="flex items-center gap-2">
+              <FileText className="w-4 h-4 text-minimal-dark" />
+              <span>CV (PDF)</span>
+            </div>
+            <ArrowUpRight className="w-4 h-4 text-minimal-muted" />
+          </a>
         </div>
 
       </div>

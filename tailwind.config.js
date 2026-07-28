@@ -7,41 +7,22 @@ export default {
   theme: {
     extend: {
       colors: {
-        paper: {
-          bg: '#F5F3EF',
-          grid: '#E4E0D7',
+        minimal: {
+          bg: '#FAFAFA',
           card: '#FFFFFF',
-          cardHover: '#FAF8F5',
-          border: '#E2DDD3',
-          borderActive: '#1E3A8A'
-        },
-        ink: {
-          dark: '#17191C',
-          muted: '#5C6470',
-          subtle: '#8C95A3',
-          light: '#F8FAFC'
-        },
-        blueprint: {
-          DEFAULT: '#1E3A8A',
-          hover: '#1D4ED8',
-          light: '#EFF6FF'
-        },
-        copper: {
-          DEFAULT: '#B95000',
-          hover: '#D97706',
-          light: '#FFFBEB'
-        },
-        emeraldSeal: {
-          DEFAULT: '#059669',
-          light: '#ECFDF5'
+          border: '#E5E7EB',
+          borderHover: '#D1D5DB',
+          dark: '#111827',
+          muted: '#6B7280',
+          subtle: '#9CA3AF',
+          accent: '#2563EB',
+          accentBg: '#EFF6FF'
         }
       },
       fontFamily: {
-        display: ['"Syne"', '"Space Grotesk"', 'sans-serif'],
-        serif: ['"Source Serif 4"', 'serif'],
+        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
         mono: ['"JetBrains Mono"', 'monospace'],
-        body: ['"Source Serif 4"', 'serif'],
-        sans: ['"Space Grotesk"', 'sans-serif']
+        display: ['"Plus Jakarta Sans"', 'sans-serif']
       }
     },
   },

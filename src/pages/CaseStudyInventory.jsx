@@ -2,18 +2,17 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import Breadcrumbs from '../components/Breadcrumbs';
 import { projectsData } from '../data/projects';
-import RoutingSimWidget from '../components/RoutingSimWidget';
 import { ArrowLeft, Github } from 'lucide-react';
 
-export default function CaseStudyMapmynet() {
-  const project = projectsData.find(p => p.id === 'mapmynet');
+export default function CaseStudyInventory() {
+  const project = projectsData.find(p => p.id === 'inventory-app');
 
   return (
     <div className="max-w-4xl mx-auto px-6 sm:px-8 py-12 space-y-12">
       
       <Breadcrumbs items={[
         { label: 'Projets', path: '/projets' },
-        { label: 'MapMyNet' }
+        { label: 'Gestion de Stock' }
       ]} />
 
       {/* Hero Cover Card */}
@@ -50,15 +49,7 @@ export default function CaseStudyMapmynet() {
         </div>
       </div>
 
-      {/* Interactive Simulator Widget Section */}
-      <section className="space-y-4">
-        <h2 className="font-bold text-lg text-minimal-dark tracking-tight">
-          Démonstration en direct (Simulateur Dijkstra & Chaos)
-        </h2>
-        <RoutingSimWidget />
-      </section>
-
-      {/* Short Direct Sections (Contexte, Ce qui a été fait, Résultat) */}
+      {/* Short Direct Sections */}
       <div className="space-y-10 text-minimal-dark text-sm sm:text-base leading-relaxed">
         
         <section className="space-y-3">
