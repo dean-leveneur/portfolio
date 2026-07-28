@@ -110,7 +110,7 @@ export default function AboutSection() {
             </div>
 
             <div className="space-y-3">
-              {profileData.status.geography.map((geo, idx) => (
+              {profileData.status?.geography?.map((geo, idx) => (
                 <div key={idx} className="p-3 rounded bg-tech-dark border border-tech-border/80">
                   <div className="font-display font-bold text-sm text-tech-light flex items-center justify-between">
                     {geo.city}
