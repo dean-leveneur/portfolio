@@ -22,27 +22,6 @@ export default function Contact() {
         <h1 className="font-bold text-3xl text-minimal-dark tracking-tight">
           Contact
         </h1>
-        <p className="text-sm text-minimal-muted max-w-xl">
-          Recherche de stage ingénieur de 8 à 14 semaines à partir de mi-juin 2027.
-        </p>
-      </div>
-
-      {/* Stage Criteria Minimal Summary */}
-      <div className="p-6 rounded-xl bg-minimal-card border border-minimal-border space-y-4 shadow-sm">
-        <h2 className="font-bold text-sm text-minimal-dark font-mono uppercase tracking-wider">
-          // CRITÈRES DE STAGE 3IF
-        </h2>
-
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 font-mono text-xs text-minimal-muted">
-          <div>
-            <div className="font-bold text-minimal-dark">Durée & Période</div>
-            <div>8 à 14 semaines (à partir de mi-juin 2027)</div>
-          </div>
-          <div>
-            <div className="font-bold text-minimal-dark">Localisation</div>
-            <div>Lyon / Villeurbanne ou La Réunion</div>
-          </div>
-        </div>
       </div>
 
       {/* Direct Contact Links */}
