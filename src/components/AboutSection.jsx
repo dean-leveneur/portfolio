@@ -30,7 +30,7 @@ export default function AboutSection() {
       color: "text-tech-emerald",
       borderColor: "border-tech-emerald/30",
       title: "IA & Automatisation Métier",
-      desc: "Développement d'outils d'automatisation s'appuyant sur des LLM (OpenAI API, Flask, Python). Expérience concrète de déploiement en autonomie chez Run Hélico avec gestion complète du cycle de vie logiciel."
+      desc: "Développement d'outils d'automatisation s'appuyant sur des LLM (API OpenAI, Flask, Python). Déploiement en autonomie chez Run Hélico avec gestion complète du projet."
     }
   ];
 

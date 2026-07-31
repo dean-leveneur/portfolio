@@ -33,7 +33,7 @@ export default function Hero() {
             </h1>
 
             <p className="text-tech-muted text-base sm:text-lg max-w-2xl leading-relaxed">
-              Je suis <strong className="text-tech-light font-semibold">Dean Leveneur</strong>, élève-ingénieur en 3e année à l'INSA Lyon (spécialisation 3IF). J'allie la rigueur du bas-niveau (POSIX, C/C++, embarqué BLE) à la puissance du calcul scientifique (Python, RK4) et à l'automatisation intelligente par LLM.
+              Je suis <strong className="text-tech-light font-semibold">Dean Leveneur</strong>, élève-ingénieur en 3e année à l'INSA Lyon (spécialisation 3IF). J'allie la rigueur du bas-niveau (POSIX, C/C++, embarqué BLE) à la puissance du calcul scientifique (Python, RK4) et à l'automatisation par LLM.
             </p>
 
             {/* Quick Specs Grid */}
@@ -140,7 +140,7 @@ export default function Hero() {
                     </div>
                     <div className="p-2 rounded bg-tech-dark border border-tech-border/50">
                       <div className="text-tech-amber font-bold text-sm">50/jour</div>
-                      <div className="text-tech-subtle text-[10px]">Emails IA Run Hélico</div>
+                      <div className="text-tech-subtle text-[10px]">E-mails Run Hélico</div>
                     </div>
                     <div className="p-2 rounded bg-tech-dark border border-tech-border/50">
                       <div className="text-tech-purple font-bold text-sm">RK4</div>

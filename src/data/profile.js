@@ -13,7 +13,7 @@ export const profileData = {
     geography: "Lyon / Villeurbanne ou La Réunion (Tampon / St-Pierre)"
   },
 
-  aboutShort: "Ingénieur en formation 3IF à l'INSA Lyon. Passionné par l'architecture logicielle, les systèmes embarqués POSIX/BLE, la simulation physique du chaos et l'automatisation par IA.",
+  aboutShort: "Ingénieur en formation 3IF à l'INSA Lyon. Je m'intéresse à l'architecture logicielle, aux systèmes embarqués POSIX/BLE, à la simulation physique du chaos et à l'automatisation par LLM.",
   
   education: [
     {

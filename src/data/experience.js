@@ -5,10 +5,10 @@ export const experiencesData = [
     company: "Run Hélico",
     location: "La Réunion, France",
     period: "Juin 2026 – Août 2026",
-    description: "Développement en autonomie complète d'un outil d'IA s'appuyant sur l'API OpenAI (LLM) et Flask pour automatiser la gestion des réponses clients (~50 e-mails/jour).",
+    description: "Développement en autonomie d'un outil basé sur l'API OpenAI (LLM) et Flask pour automatiser la gestion des réponses clients (~50 e-mails/jour).",
     highlights: [
       "Conception du parsing des e-mails entrants via imaplib, génération de réponses contextuelles et envoi automatique via smtplib.",
-      "Prise en charge intégrale du cycle de vie logiciel : analyse du besoin, architecture, déploiement et amélioration continue sur le terrain."
+      "Gestion complète du projet : de l'analyse du besoin au déploiement et à la maintenance."
     ],
     tags: ["Python", "Flask", "OpenAI API", "LLM", "IMAP", "SMTP", "Automatisation"]
   }
@@ -24,7 +24,7 @@ export const educationData = [
     description: "Formation d'ingénieur généraliste de haut niveau en informatique.",
     details: [
       "Cycle Ingénieur 3IF : Programmation Orientée Objet (Java/C++), Systèmes d'exploitation POSIX & Threads, Réseaux & Protocoles (ISO, IP, Routage), Bases de Données (SQL, Oracle, MongoDB), Modélisation UML & Web Java EE.",
-      "Cycle FIMI (Formation Initiale à Métier d'Ingénieur) : Mathématiques appliquées, physique fondamentale, algorithmique avancée et programmation C."
+      "Cycle FIMI (Formation Initiale aux Métiers d'Ingénieur) : Mathématiques appliquées, physique fondamentale, algorithmique avancée et programmation C."
     ],
     tags: ["C", "C++", "Java", "POSIX", "Réseaux", "SQL", "Maths Appliquées", "UML"]
   }
@@ -47,7 +47,7 @@ export const skillsData = [
       { name: "Linux / Unix", level: "Environnement quotidien" },
       { name: "POSIX Threads", level: "Mutex, Sémaphores, Synchronisation" },
       { name: "Outillage C", level: "Make, GDB, Valgrind" },
-      { name: "Architecture matériel", level: "Circuits logiques, Assembleur, Drivers E/S" }
+      { name: "Architecture matérielle", level: "Circuits logiques, Assembleur, Drivers E/S" }
     ]
   },
   {

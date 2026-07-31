@@ -12,7 +12,7 @@ export const projectsData = [
     detailPath: "/projets/escablind",
     image: "./images/escablind-cover.png",
     
-    context: "Permettre à une personne malvoyante ou non-voyante de grimpée en toute autonomie sur un mur d'escalade grâce au positionnement ultra-précis UWB Pozyx, un guidage vocal oralisé et un retour haptique par vibration.",
+    context: "Permettre à une personne malvoyante ou non-voyante de grimper en toute autonomie sur un mur d'escalade grâce au positionnement ultra-précis UWB Pozyx, un guidage vocal oralisé et un retour haptique par vibration.",
     whatWasDone: [
       "Intégration des balises UWB Pozyx pour la géolocalisation 3D exacte du grimpeur et protocole BLE d'appairage avec le smartphone.",
       "Développement du firmware Arduino contrôlant un vibreur haptique avec intensité PWM proportionnelle à la proximité de la cible.",
@@ -46,7 +46,7 @@ export const projectsData = [
     ],
     results: [
       "Test de résilience et mesure des temps de convergence sur des topographies jusqu'à 50 nœuds.",
-      "Démonstrateur dynamique d'algorithmes de routage réseaux ISO/IP."
+      "Démonstrateur dynamique d'algorithmes de routage réseau ISO/IP."
     ]
   },
 
@@ -82,14 +82,14 @@ export const projectsData = [
     featured: false,
     title: "RunMail — Automatisation IA de Réponses E-mails",
     category: "IA & Automatisation",
-    tagline: "Assistant IA autonome générant des réponses e-mails contextuelles via OpenAI LLM et interface web.",
+    tagline: "Assistant générant des réponses aux e-mails via l'API OpenAI et une interface web.",
     period: "2026",
     techStack: ["Python", "Flask", "OpenAI LLM API", "IMAP / SMTP"],
     githubUrl: "https://github.com/dean-leveneur/RunMail",
     detailPath: "/projets/run-helico-ai",
     image: "./images/runmail-cover.png",
     
-    context: "Traiter automatiquement ~50 demandes e-mails clients par jour pour une entreprise sur l'île de La Réunion (Run Hélico) sans délai de réponse manuel.",
+    context: "Automatiser le traitement d'environ 50 e-mails clients par jour pour l'entreprise Run Hélico.",
     whatWasDone: [
       "Développement d'un service Flask analysant les messages entrants via le protocole IMAP.",
       "Intégration de l'API OpenAI avec règles de prompt personnalisées pour formuler des réponses adaptées à la charte et aux disponibilités.",
